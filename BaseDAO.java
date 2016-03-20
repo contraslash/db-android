@@ -1,4 +1,4 @@
-package com.contraslash.android.openspeechcorpus.db;
+package com.contraslash.android.db;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,11 +6,9 @@ import android.database.Cursor;
 import android.database.CursorIndexOutOfBoundsException;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.design.widget.TabLayout;
 import android.util.Log;
 
-import com.contraslash.android.network.Util;
-import com.contraslash.android.openspeechcorpus.apps.core.models.AudioData;
+
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

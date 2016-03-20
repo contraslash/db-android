@@ -1,17 +1,10 @@
-package com.contraslash.android.openspeechcorpus.db;
+package com.contraslash.android.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.contraslash.android.network.Util;
-import com.contraslash.android.openspeechcorpus.apps.core.models.AudioData;
-import com.contraslash.android.openspeechcorpus.apps.miscellany.models.Command;
-import com.contraslash.android.openspeechcorpus.apps.news.models.New;
-import com.contraslash.android.openspeechcorpus.apps.tales.models.Author;
-import com.contraslash.android.openspeechcorpus.apps.tales.models.Sentence;
-import com.contraslash.android.openspeechcorpus.apps.tales.models.Tale;
 
 /**
  * Created by ma0 on 11/3/15.
@@ -20,17 +13,11 @@ public class SQLiteHelper extends SQLiteOpenHelper{
 
 
     private String TAG = "SQLiteHelper";
-    private static final String DATABASE_NAME = "openspeechcorpus.db";
-    private static final int DATABASE_VERSION = 9;
+    private static final String DATABASE_NAME = "";
+    private static final int DATABASE_VERSION = 1;
 
 
     Table [] tables = {
-            new AudioData(),
-            new Author(),
-            new Sentence(),
-            new Tale(),
-            new New(),
-            new Command()
     };
 
     // Database creation sql statement
@@ -70,18 +57,12 @@ public class SQLiteHelper extends SQLiteOpenHelper{
     }
 
     Table [] tables1 = {
-            new Author(),
-            new Sentence(),
-            new Tale()
     };
 
 
     private void patches(SQLiteDatabase database, int oldVersion)
     {
-        if(oldVersion==8)
-        {
-            database.execSQL("ALTER TABLE OPS_tale ADD COLUMN readed integer");
-        }
+
     }
 
     public void purgeDatabase()

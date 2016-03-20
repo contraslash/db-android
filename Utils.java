@@ -1,4 +1,4 @@
-package com.contraslash.android.openspeechcorpus.db;
+package com.contraslash.android.db;
 
 import android.util.Log;
 
